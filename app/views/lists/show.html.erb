@@ -1,6 +1,7 @@
 <div class="container">
   <p class='mt-3'><%= link_to 'Back to lists', lists_path, class: 'btn btn-success' %></p>
   <h1><%= @list.name %></h1>
+  <%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill %>
   <ul>
     <% @bookmarks.each do |bookmark| %>
   <li>

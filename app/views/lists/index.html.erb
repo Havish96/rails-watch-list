@@ -3,7 +3,10 @@
   <p><%= link_to 'Add a new list', new_list_path, class: 'btn btn-primary' %></p>
   <ul>
     <% @lists.each do |list| %>
-    <li><%= list.name %></li>
+    <li>
+      <p><%= list.name %></p>
+      <%= cl_image_tag list.photo.key, width: 400, height: 300, crop: :fill %>
+    </li>
     <% end %>
   </ul>
 </div>
